@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: #121212;
+    font-family: Helvetica, sans-serif;
+
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: auto; 
+
+}
+
+header.navbar-container {
+    width: 100%;
+    max-height: 4rem;
+    padding-block: 1rem;
+    margin-inline: auto;
+    background-color: #332940;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 9999;
+    
+}
+header.navbar-container .logo img {
+    width: 120px;
+}
+header.navbar-container .nav-item ul {
+    
+    padding-inline: 2rem;
+    padding-right: 200px;
+    display: flex;
+    gap: 2rem 1rem;
+
+
+}
+header.navbar-container .nav-item a{
+    color: white;
+
+    text-decoration: none;
+   
+}
+
+.nav-item a {
+    list-style-type: none;
+
+}
+.nav-item a:link {
+    color: blue;
+}
+
+.nav-item a:hover {
+    font-weight: bold;
+}
+
+main {
+    padding: 10px;
+
+    display: flex;
+    gap: 1.5rem;
+
+}
+main h2 {
+    color: #BB86FC;
+}
+
+#content {
+   flex: 5;
+
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 1rem 2rem;
+}
+
+aside {
+    flex: 1;
+    
+    padding-left: 20px;
+}
+
+.background-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+    border: solid;
+    border-width: 4px;
+    border-color: #03DAC6;
+}
+
+.character-image {
+   width: 20%;
+
+   border: solid;
+   border-radius: 10px;
+   border-width: 3px;
+   border-color: #03DAC6;
+   padding: 1px;
+   
+
+
+}
+
+.gallery-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+    border: solid;
+    border-width: 4px;
+    border-color: #03DAC6;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    background-color: #1F1A24;
+
+    padding: 20px;
+    
+}
+
+section {
+    padding: 10px;
+
+}
+#section-border {
+
+    border: solid;
+    border-width: 4px;
+    border-color: #03DAC6;
+    margin: 15px;
+}
+
+footer {
+    padding: 10px;
+    color: white;
+    background-color: #332940;
+    text-align: center;
+    font-weight: bold;
+    max-height: 4rem;
+    font-size: 11px;
+    
+}
+
+.profile header {
+    text-align: center;
+}
+.profile header h3 {
+    font-family: "Press Start 2P";
+}
+.profile-image {
+    width: 200px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .nav-item ul{
+        justify-content: center;
+    }
+   
+    main aside {
+        align-self: stretch;
+    }
+}
